@@ -55,8 +55,3 @@ def read_root(settings: config.Settings = Depends(get_settings)):
 def read_item(item_id: int, q: Union[str, None] = None):
     return {"item_id": item_id, "q": q}
 
-
-@app.head("/items/{item_id}")
-def read_item_head(item_id: int):
-    # Your logic here
-    return {}
